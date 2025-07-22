@@ -162,7 +162,7 @@
 </head>
 <body>
     <header>
-        <h1>Alwin, Publications</h1>
+        <h1 id="typing-title" style="min-height:2.2em;"></h1>
         <nav>
             <a href="#home">Home</a>
             <a href="#research">Research</a>
@@ -170,6 +170,35 @@
             <a href="#news">News</a>
         </nav>
     </header>
+    <script>
+const text = "Alwin, Publications";
+const el = document.getElementById("typing-title");
+let idx = 0;
+let forward = true;
+
+function typeLoop() {
+    if (forward) {
+        if (idx <= text.length) {
+            el.textContent = text.slice(0, idx);
+            idx++;
+            setTimeout(typeLoop, 90);
+        } else {
+            forward = false;
+            setTimeout(typeLoop, 1200);
+        }
+    } else {
+        if (idx >= 0) {
+            el.textContent = text.slice(0, idx);
+            idx--;
+            setTimeout(typeLoop, 40);
+        } else {
+            forward = true;
+            setTimeout(typeLoop, 600);
+        }
+    }
+}
+typeLoop();
+</script>
     
     <section id="home">
         <h2>About Me</h2>
