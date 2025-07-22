@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Situs Researcher Alwin</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #333333;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #f8f8f8;
+            padding: 30px;
+            text-align: center;
+            border-bottom: 1px solid #dddddd;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.2em;
+            color: #1a1a1a;
+        }
+        nav {
+            margin-top: 15px;
+        }
+        nav a {
+            margin: 0 20px;
+            text-decoration: none;
+            color: #0056b3;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        section h2 {
+            color: #1a1a1a;
+            border-bottom: 2px solid #eeeeee;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+        .profile-photo {
+            display: block;
+            max-width: 180px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            border: 1px solid #dddddd;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            margin-bottom: 25px;
+            padding: 15px;
+            background-color: #f8f8f8;
+            border: 1px solid #eeeeee;
+            border-radius: 4px;
+        }
+        ul li strong {
+            display: block;
+            font-size: 1.2em;
+            color: #1a1a1a;
+        }
+        ul li .type {
+            font-style: italic;
+            color: #666666;
+            margin-bottom: 5px;
+        }
+        ul li .abstract {
+            margin: 10px 0;
+            font-size: 0.95em;
+        }
+        ul li a {
+            color: #c0392b;
+            text-decoration: none;
+        }
+        ul li a:hover {
+            text-decoration: underline;
+        }
+        .news-item {
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eeeeee;
+        }
+        .news-item:last-child {
+            border-bottom: none;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f8f8f8;
+            border-top: 1px solid #dddddd;
+            font-size: 0.9em;
+            color: #666666;
+        }
+        .research-interests {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px 28px;
+            margin: 18px 0 18px 0;
+            font-size: 1.08em;
+        }
+        .research-interests span {
+            display: flex;
+            align-items: center;
+            background: #f8f8f8;
+            border: 1px solid #eeeeee;
+            border-radius: 16px;
+            padding: 6px 16px 6px 10px;
+            margin-bottom: 0;
+            color: #1a1a1a;
+            font-weight: 500;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+        }
+        .research-interests .icon {
+            font-size: 0.7em;
+            color: #c0392b;
+            margin-right: 8px;
+            margin-top: 1px;
+        }
+        .about-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 28px;
+            margin-bottom: 10px;
+        }
+        .profile-photo-rect {
+            display: block;
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 1px solid #dddddd;
+            margin: 0;
+            background: #fafafa;
+        }
+        .about-text {
+            flex: 1;
+            min-width: 0;
+        }
+        @media (max-width: 700px) {
+            .about-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .about-text {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Alwin, Publications</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#research">Research</a>
+            <a href="#publications">Publications</a>
+            <a href="#news">News</a>
+        </nav>
+    </header>
+    
+    <section id="home">
+        <h2>About Me</h2>
+        <div class="about-container">
+            <img src="alwin.jpg" alt="Alwin Profile Photo" class="profile-photo-rect">
+            <div class="about-text">
+                <p>Hello, I'm Alwin, a second-semester undergraduate student at Universitas Indonesia. I have broad interests across multiple fields because I believe interdisciplinary approaches can drive innovation and new solutions.</p>
+                <p>In the <strong>Research Interests</strong> section, you can see the topics I'm currently exploring. Below is a list of papers and research projects I have worked on. I welcome any feedback or peer review if you find any mistakes or areas for improvement.</p>
+                <p>Contact: <a href="mailto:alwinnear@gmail.com">alwinnear@gmail.com</a> | Location: South Jakarta, DKI Jakarta, Indonesia | <a href="https://sleepyalwin.netlify.app" target="_blank">Portfolio Website</a></p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="research">
+        <h2>Research Interests</h2>
+        <p>My research covers topics such as:</p>
+        <div class="research-interests">
+            <span><span class="icon">&#9679;</span> Computer Science & AI</span>
+            <span><span class="icon">&#9679;</span> Mathematics</span>
+            <span><span class="icon">&#9679;</span> Economics</span>
+            <span><span class="icon">&#9679;</span> Medical Science</span>
+            <span><span class="icon">&#9679;</span> Psychology</span>
+            <span><span class="icon">&#9679;</span> Engineering</span>
+        </div>
+    </section>
+    
+    <section id="publications">
+        <h2>Selected Publications</h2>
+        <ul>
+            <li>
+                <strong>A Friendly Introduction to Linear Algebra (June 2025)</strong>
+                <div class="type">[Book]</div>
+                <p class="abstract">Abstract: An introductory-level textbook in Indonesian that offers an intuitive approach to linear algebra. Covers systems of linear equations, vectors, vector spaces, matrices, and elementary row operations (ERO), with simple explanations and real-life analogies. Collaboration with Sahira AK.</p>
+                <a href="link-ke-pdf.pdf" download>Download PDF</a>
+            </li>
+            <li>
+                <strong>What Is Protein Folding and Why Is It NP-Hard (June 2025)</strong>
+                <div class="type">[Research Paper]</div>
+                <p class="abstract">Abstract: An analysis of the computational complexity of protein folding, focusing on the NP-hardness of structure prediction using the HP lattice model and its implications for computational biology. Collaboration with Sahira AK.</p>
+                <a href="link-ke-pdf.pdf" download>Download PDF</a>
+            </li>
+            <li>
+                <strong>A Deterministic Polynomial-Time Approach to SAT (May 2025)</strong>
+                <div class="type">[Research Proposal]</div>
+                <p class="abstract">Abstract: A novel approach to solving the Boolean Satisfiability Problem in polynomial time using a deterministic algorithm.</p>
+                <a href="link-ke-pdf.pdf" download>Download PDF</a>
+            </li>
+            <li>
+                <strong>The P vs NP Problem (May 2025)</strong>
+                <div class="type">[Research Proposal]</div>
+                <p class="abstract">Abstract: A comprehensive analysis and potential solution approaches for one of the most fundamental problems in computer science. Keywords: P vs NP, Computational Complexity, Theoretical Computer Science.</p>
+                <a href="link-ke-pdf.pdf" download>Download PDF</a>
+            </li>
+            <li>
+                <strong>XSPC-256: A Privacy-Centric Frontend Encryption Protocol (May 2025)</strong>
+                <div class="type">[Research Proposal]</div>
+                <p class="abstract">Abstract: An innovative encryption protocol for frontend applications with deterministic key derivation and probabilistic obfuscation.</p>
+                <a href="link-ke-pdf.pdf" download>Download PDF</a>
+            </li>
+            <li>
+                <strong>Teknologi Blockchain dan Cryptocurrency (May 2025)</strong>
+                <div class="type">[Research Proposal]</div>
+                <p class="abstract">Abstrak: Studi komprehensif tentang teknologi blockchain, sistem cryptocurrency, aspek keamanan, aplikasi, dan potensi ekonomi.</p>
+                <a href="link-ke-pdf.pdf" download>Download PDF</a>
+            </li>
+            <li>
+                <strong>Discrete-Continuous Resource Distribution Optimization via Lagrange Relaxation and Boundary Analysis (May 2025)</strong>
+                <div class="type">[Article]</div>
+                <p class="abstract">Abstract: A mathematical framework combining Lagrangian relaxation with boundary analysis to address discrete-continuous resource allocation optimization problems in logistics, manufacturing, telecommunications, and finance.</p>
+                <a href="link-ke-pdf.pdf" download>Download PDF</a>
+            </li>
+            <li>
+                <strong>Keunggulan Mahasiswa FEB dalam Menciptakan Peluang Keuangan (February 2025)</strong>
+                <div class="type">[Research Proposal]</div>
+                <p class="abstract">Abstrak: Analisis keunggulan mahasiswa ekonomi dalam menciptakan peluang keuangan melalui pendidikan, jaringan, dan digitalisasi.</p>
+                <a href="link-ke-pdf.pdf" download>Download PDF</a>
+            </li>
+            <li>
+                <strong>Complexity Calculus: Geometric-Entropic Framework for P vs NP (February 2025)</strong>
+                <div class="type">[Research Proposal]</div>
+                <p class="abstract">Abstract: A novel geometric-entropic mathematical framework to approach the P vs NP conjecture through complexity calculus.</p>
+                <a href="link-ke-pdf.pdf" download>Download PDF</a>
+            </li>
+            <li>
+                <strong>Problem Reduction in Computational Complexity: Foundations, Techniques, and Applications (February 2025)</strong>
+                <div class="type">[Research Proposal]</div>
+                <p class="abstract">Abstract: A comprehensive exploration of problem reduction theory in computational complexity, examining fundamental principles, reduction techniques, and their applications in algorithm design and complexity analysis.</p>
+                <a href="link-ke-pdf.pdf" download>Download PDF</a>
+            </li>
+            <li>
+                <strong>Comparison of Current Narrow AI Systems and Hypothetical Artificial General Intelligence (July 2025)</strong>
+                <div class="type">[Research Paper]</div>
+                <p class="abstract">Abstract: This paper analyzes the gap between current narrow AI (ANI) and the concept of AGI, highlighting key differences in generality, autonomy, and understanding. It discusses architectural needs, limitations of current systems, benchmarks for AGI, and alignment challenges.</p>
+                <a href="link-ke-pdf.pdf" download>Download PDF</a>
+            </li>
+            <li>
+                <strong>How Shor’s Algorithm Breaks Modern Cryptography (June 2025)</strong>
+                <div class="type">[Research Paper]</div>
+                <p class="abstract">Abstract: Explains how Shor’s quantum algorithm threatens RSA and ECC by efficiently solving integer factorization and discrete logarithm problems, discusses quantum hardware progress, and the urgency of post-quantum cryptography.</p>
+                <a href="link-ke-pdf.pdf" download>Download PDF</a>
+            </li>
+            <li>
+                <strong>Paradoks Afeksi: Mengurai Lintasan Cinta Pria dan Wanita dari Perspektif Evolusi, Neurobiologi, Kelekatan, dan Sosiologi (Juni 2025)</strong>
+                <div class="type">[Research Paper]</div>
+                <p class="abstract">Abstrak: Paper ini membahas perbedaan lintasan afeksi pria dan wanita dalam hubungan romantis dengan pendekatan evolusi, neurobiologi, kelekatan, dan sosiologi. Disajikan model multifaktorial dan kurva afeksi untuk pemahaman yang lebih holistik.</p>
+                <a href="link-ke-pdf.pdf" download>Download PDF</a>
+            </li>
+        </ul>
+    </section>
+    
+    <section id="news">
+        <h2>News and Updates</h2>
+        <div class="news-item">
+            <strong>July 2025:</strong> Added a new paper comparing Narrow AI and AGI.
+        </div>
+        <div class="news-item">
+            <strong>June 2025:</strong> Published papers on Shor’s Algorithm and the Affection Paradox.
+        </div>
+        <div class="news-item">
+            <strong>June 2025:</strong> Released a new linear algebra book and a paper on protein folding.
+        </div>
+        <div class="news-item">
+            <strong>May 2025:</strong> Research proposals on SAT, P vs NP, encryption, blockchain, and resource optimization.
+        </div>
+        <div class="news-item">
+            <strong>February 2025:</strong> Proposals on student finance, complexity calculus, and problem reduction.
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Alwin. All rights reserved. Updated on July 22, 2025.</p>
+    </footer>
+</body>
+</html>
