@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id" data-theme="light">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,18 +21,6 @@
             --accent-hover-color: #2563eb;
             --shadow-color: rgba(0, 0, 0, 0.05);
             --icon-color: #9ca3af;
-        }
-
-        [data-theme="dark"] {
-            --bg-color: #111827;
-            --card-color: #1f2937;
-            --text-color: #f9fafb;
-            --text-secondary-color: #9ca3af;
-            --border-color: #374151;
-            --accent-color: #60a5fa;
-            --accent-hover-color: #3b82f6;
-            --shadow-color: rgba(0, 0, 0, 0.2);
-            --icon-color: #6b7280;
         }
 
         /* General Styles */
@@ -91,30 +79,6 @@
         nav a:hover, nav a.active {
             color: var(--accent-color);
         }
-
-        .theme-toggle {
-            background: none;
-            border: none;
-            cursor: pointer;
-            color: var(--icon-color);
-            padding: 5px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .theme-toggle:hover {
-            color: var(--accent-color);
-        }
-
-        .theme-toggle svg {
-            width: 22px;
-            height: 22px;
-        }
-
-        .icon-sun, .icon-moon { display: none; }
-        [data-theme="light"] .icon-moon { display: block; }
-        [data-theme="dark"] .icon-sun { display: block; }
 
         /* Main Content & Sections */
         main {
@@ -280,10 +244,11 @@
             .about-container {
                 flex-direction: column;
                 align-items: center;
-                text-align: center;
+                /* text-align: center; <-- This line was removed to keep text left-aligned */
             }
             .about-text {
                 width: 100%;
+                text-align: left; /* Explicitly set to left for mobile */
             }
         }
     </style>
@@ -296,10 +261,7 @@
             <a href="#research">Research</a>
             <a href="#publications">Publications</a>
             <a href="#news">News</a>
-            <button id="theme-toggle" class="theme-toggle" title="Toggle dark mode">
-                <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" /></svg>
-                <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" /></svg>
-            </button>
+            <!-- Theme toggle button removed -->
         </nav>
     </header>
 
@@ -454,7 +416,7 @@
     </footer>
 
     <script>
-        // Typing effect script (unchanged from original)
+        // Typing effect script
         const text = "Alwin, Publications";
         const el = document.getElementById("typing-title");
         let idx = 0;
@@ -481,45 +443,8 @@
             }
         }
         
-        // --- Dark Mode Toggle Script ---
-        const themeToggle = document.getElementById('theme-toggle');
-        const htmlEl = document.documentElement;
-
-        // Function to set the theme
-        function setTheme(theme) {
-            htmlEl.setAttribute('data-theme', theme);
-            localStorage.setItem('theme', theme);
-        }
-
-        // Event listener for the toggle button
-        themeToggle.addEventListener('click', () => {
-            const currentTheme = htmlEl.getAttribute('data-theme');
-            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-            setTheme(newTheme);
-        });
-
-        // Function to apply initial theme on page load
-        function applyInitialTheme() {
-            const savedTheme = localStorage.getItem('theme');
-            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-            
-            if (savedTheme) {
-                setTheme(savedTheme);
-            } else if (prefersDark) {
-                setTheme('dark');
-            } else {
-                setTheme('light');
-            }
-            
-            // Start the typing animation after setting the theme
-            typeLoop();
-        }
-
-        // Apply the theme when the DOM is fully loaded
-        document.addEventListener('DOMContentLoaded', applyInitialTheme);
-    </script>
-</body>
-</html>
+        // Start the typing animation when the DOM is fully loaded
+        document.addEventListener('DOMContentLoaded', typeLoop);
     </script>
 </body>
 </html>
