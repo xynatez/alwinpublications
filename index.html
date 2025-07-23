@@ -151,6 +151,20 @@
             font-weight: 500;
             color: var(--text-secondary-color);
             box-shadow: 0 1px 2px var(--shadow-color);
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+        }
+
+        .research-interests span:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+            border-color: var(--accent-color);
+        }
+
+        .research-interests span:active {
+            transform: translateY(-1px) scale(0.98);
+            background-color: var(--accent-hover-color);
+            color: var(--card-color);
         }
         
         /* Publications List (Card Style) */
@@ -244,11 +258,14 @@
             .about-container {
                 flex-direction: column;
                 align-items: center;
-                /* text-align: center; <-- This line was removed to keep text left-aligned */
             }
             .about-text {
                 width: 100%;
-                text-align: left; /* Explicitly set to left for mobile */
+                text-align: left; 
+            }
+            .contact-info span {
+                display: block;
+                margin-bottom: 10px;
             }
         }
     </style>
@@ -261,7 +278,6 @@
             <a href="#research">Research</a>
             <a href="#publications">Publications</a>
             <a href="#news">News</a>
-            <!-- Theme toggle button removed -->
         </nav>
     </header>
 
@@ -272,8 +288,8 @@
                 <img src="alwin.jpg" alt="Alwin Profile Photo" class="profile-photo-rect">
                 <div class="about-text">
                     <p>Hello, I'm Alwin, a second-semester undergraduate student at Universitas Indonesia. I have broad interests across multiple fields because I believe interdisciplinary approaches can drive innovation and new solutions.</p>
-                    <p>In the <strong>Research Interests</strong> section, you can see the topics I'm currently exploring. Below is a list of papers and research projects I have worked on. I welcome any feedback or peer review if you find any mistakes or areas for improvement.</p>
-                    <p>
+                    <p>In the <strong>Research Interests</strong> section, you can see the topics I'm currently exploring. Below is a list of papers and research projects I have worked on. <u><i>I welcome any feedback or peer review if you find any mistakes or areas for improvement.</i></u></p> <!-- PERUBAHAN DI SINI -->
+                    <p class="contact-info">
                         <span title="Email" style="margin-right:12px;">
                             <i class="fas fa-envelope"></i>
                             <a href="mailto:alwinnear@gmail.com" style="color:inherit;text-decoration:none;">alwinnear@gmail.com</a>
