@@ -29,7 +29,7 @@
         }
 
         body {
-            font-family: 'EB Garamond', serif; /* Changed to EB Garamond for a novel/book-like feel */
+            font-family: 'EB Garamond', serif;
             margin: 0;
             padding: 0;
             background-color: var(--bg-color);
@@ -134,37 +134,49 @@
             text-decoration: underline;
         }
         
-        /* Research Interests Tags */
+        /* === IMPROVED RESEARCH INTERESTS SECTION === */
         .research-interests {
             display: flex;
             flex-wrap: wrap;
             gap: 12px;
             margin-top: 15px;
+            perspective: 1000px; /* Enables 3D space for child elements */
         }
 
         .research-interests span {
+            display: inline-block;
             background-color: var(--card-color);
             border: 1px solid var(--border-color);
             border-radius: 20px;
-            padding: 8px 16px;
-            font-size: 0.95em;
-            font-weight: 500;
+            padding: 12px 18px; /* Increased padding for easier pressing */
+            font-size: 1em; /* Slightly larger font for readability */
+            font-weight: 600;
             color: var(--text-secondary-color);
-            box-shadow: 0 1px 2px var(--shadow-color);
+            box-shadow: 0 2px 6px var(--shadow-color);
             cursor: pointer;
-            transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                        box-shadow 0.3s ease,
+                        background-color 0.3s ease,
+                        color 0.3s ease;
+            user-select: none; /* Prevents text selection on tap */
+            touch-action: manipulation; /* Optimizes touch interaction on mobile */
+            will-change: transform; /* Browser optimization for animation */
         }
 
-        .research-interests span:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+        .research-interests span:hover, .research-interests span:focus-visible {
+            transform: translateY(-8px) rotateX(10deg) rotateY(10deg); /* 3D tilt effect */
+            box-shadow: 0 12px 20px rgba(0,0,0,0.15);
             border-color: var(--accent-color);
+            color: var(--accent-color);
+            outline: none;
         }
 
         .research-interests span:active {
-            transform: translateY(-1px) scale(0.98);
+            transform: translateY(-2px) scale(0.97); /* "Pressed down" effect */
             background-color: var(--accent-hover-color);
             color: var(--card-color);
+            box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+            transition: transform 0.1s ease;
         }
         
         /* Publications List (Card Style) */
@@ -288,7 +300,7 @@
                 <img src="alwin.jpg" alt="Alwin Profile Photo" class="profile-photo-rect">
                 <div class="about-text">
                     <p>Hello, I'm Alwin, a second-semester undergraduate student at Universitas Indonesia. I have broad interests across multiple fields because I believe interdisciplinary approaches can drive innovation and new solutions.</p>
-                    <p>In the <strong>Research Interests</strong> section, you can see the topics I'm currently exploring. Below is a list of papers and research projects I have worked on. <u><i>I welcome any feedback or peer review if you find any mistakes or areas for improvement.</i></u></p> <!-- PERUBAHAN DI SINI -->
+                    <p>In the <strong>Research Interests</strong> section, you can see the topics I'm currently exploring. Below is a list of papers and research projects I have worked on. <u><i>I welcome any feedback or peer review if you find any mistakes or areas for improvement.</i></u></p>
                     <p class="contact-info">
                         <span title="Email" style="margin-right:12px;">
                             <i class="fas fa-envelope"></i>
@@ -439,6 +451,7 @@
         let forward = true;
 
         function typeLoop() {
+            if (!el) return; // Stop if element not found
             el.textContent = text.slice(0, idx) + '|';
             if (forward) {
                 if (idx < text.length) {
