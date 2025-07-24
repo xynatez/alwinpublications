@@ -25,9 +25,7 @@
             --icon-color: #9ca3af;
         }
 
-        html {
-            /* scroll-behavior dihapus, akan dikontrol oleh JavaScript */
-        }
+        html {}
 
         body {
             font-family: 'EB Garamond', serif;
@@ -87,8 +85,8 @@
         }
 
         section {
-            padding-top: 40px; /* Memberi sedikit padding atas pada setiap section */
-            margin-top: -40px; /* Menetralkan padding agar jarak antar section tetap sama */
+            padding-top: 40px;
+            margin-top: -40px;
             margin-bottom: 60px;
         }
 
@@ -330,7 +328,6 @@
         <section id="publications">
             <h2>Selected Publications</h2>
             <ul class="publications-list">
-                <!-- Publication items here -->
                 <li class="publication-item">
                     <strong>A Friendly Introduction to Linear Algebra (June 2025)</strong>
                     <div class="type">[Book]</div>
@@ -440,9 +437,7 @@
     </footer>
 
     <script>
-        // --- SCRIPT UTAMA ---
         document.addEventListener('DOMContentLoaded', function() {
-            // 1. Typing effect script
             const text = "Alwin ~ Publications";
             const el = document.getElementById("typing-title");
             let idx = 0;
@@ -469,9 +464,8 @@
                     }
                 }
             }
-            typeLoop(); // Mulai animasi ketik
+            typeLoop();
 
-            // 2. Smooth scroll script yang responsif
             const navLinks = document.querySelectorAll('nav a[href^="#"]');
             
             navLinks.forEach(link => {
@@ -483,7 +477,7 @@
                     if (targetElement) {
                         const header = document.querySelector('header');
                         const headerHeight = header ? header.offsetHeight : 0;
-                        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight - 15; // Offset 15px
+                        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight - 15;
 
                         window.scrollTo({
                             top: targetPosition,
