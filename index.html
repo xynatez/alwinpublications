@@ -239,18 +239,32 @@
         }
 
         .publication-item .actions a {
-            background-color: var(--accent-color);
-            color: #fff;
+            background-color: rgba(255, 255, 255, 0.3);
+            color: var(--text-color);
             padding: 8px 14px;
             border-radius: 6px;
             font-weight: 600;
             text-decoration: none;
             display: inline-block;
+            backdrop-filter: blur(6px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            transition: background-color 0.3s;
         }
 
         .publication-item .actions a:hover {
-            background-color: var(--accent-hover-color);
+            background-color: rgba(255, 255, 255, 0.6);
             text-decoration: none;
+        }
+
+        .publication-item {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .publication-item.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
         
         .news-item {
@@ -358,7 +372,6 @@
                     <p class="abstract">Abstract: An introductory-level textbook in Indonesian that offers an intuitive approach to linear algebra. Covers systems of linear equations, vectors, vector spaces, matrices, and elementary row operations (ERO), with simple explanations and real-life analogies. Collaboration with Sahira AK.</p>
                     <div class="actions">
                         <a href="Linear_Algebra.pdf" target="_blank" rel="noopener" class="preview">Preview</a>
-                        <a href="Linear_Algebra.pdf" download class="download">Download PDF</a>
                     </div>
                 </li>
                 <li class="publication-item">
@@ -368,7 +381,6 @@
                     <p class="abstract">Abstract: FOH-1 (Front-Only Hardening) raises the cost of abusing browser-shipped secrets without claiming server-level secrecy. It combines AES-256-GCM sealing, shard-based runtime key reconstruction, JIT decryption, buffer zeroization, light anti-debugging, and deployment-bound ciphertext, with a pure-frontend reference and test plan. Collaboration with Sahira AK.</p>
                     <div class="actions">
                         <a href="Front-Only Hardening for Obscuring API Keys in Serverless Frontends.pdf" target="_blank" rel="noopener" class="preview">Preview</a>
-                        <a href="Front-Only Hardening for Obscuring API Keys in Serverless Frontends.pdf" download class="download">Download PDF</a>
                     </div>
                 </li>
                 <li class="publication-item">
@@ -378,7 +390,6 @@
                     <p class="abstract">Abstract: An analysis of the computational complexity of protein folding, focusing on the NP-hardness of structure prediction using the HP lattice model and its implications for computational biology. Collaboration with Sahira AK.</p>
                     <div class="actions">
                         <a href="What_Is_Protein_Folding_and_Why_Is_It_NP_Hard (1) 2.pdf" target="_blank" rel="noopener" class="preview">Preview</a>
-                        <a href="What_Is_Protein_Folding_and_Why_Is_It_NP_Hard (1) 2.pdf" download class="download">Download PDF</a>
                     </div>
                 </li>
                 <li class="publication-item">
@@ -388,7 +399,6 @@
                     <p class="abstract">Abstract: A novel approach to solving the Boolean Satisfiability Problem in polynomial time using a deterministic algorithm.</p>
                     <div class="actions">
                         <a href="A_Deterministic_Polynomial-Time_Approach_to_SAT.pdf" target="_blank" rel="noopener" class="preview">Preview</a>
-                        <a href="A_Deterministic_Polynomial-Time_Approach_to_SAT.pdf" download class="download">Download PDF</a>
                     </div>
                 </li>
                 <li class="publication-item">
@@ -398,7 +408,6 @@
                     <p class="abstract">Abstract: A comprehensive analysis and potential solution approaches for one of the most fundamental problems in computer science. Keywords: P vs NP, Computational Complexity, Theoretical Computer Science.</p>
                     <div class="actions">
                         <a href="The_P_vs_NP_Problem.pdf" target="_blank" rel="noopener" class="preview">Preview</a>
-                        <a href="The_P_vs_NP_Problem.pdf" download class="download">Download PDF</a>
                     </div>
                 </li>
                 <li class="publication-item">
@@ -408,7 +417,6 @@
                     <p class="abstract">Abstract: An innovative encryption protocol for frontend applications with deterministic key derivation and probabilistic obfuscation.</p>
                     <div class="actions">
                         <a href="XSPC-256.pdf" target="_blank" rel="noopener" class="preview">Preview</a>
-                        <a href="XSPC-256.pdf" download class="download">Download PDF</a>
                     </div>
                 </li>
                 <li class="publication-item">
@@ -418,7 +426,6 @@
                     <p class="abstract">Abstrak: Studi komprehensif tentang teknologi blockchain, sistem cryptocurrency, aspek keamanan, aplikasi, dan potensi ekonomi.</p>
                     <div class="actions">
                         <a href="TeknologiBlockchaindanCryptocurrency.pdf" target="_blank" rel="noopener" class="preview">Preview</a>
-                        <a href="TeknologiBlockchaindanCryptocurrency.pdf" download class="download">Download PDF</a>
                     </div>
                 </li>
                 <li class="publication-item">
@@ -428,7 +435,6 @@
                     <p class="abstract">Abstract: A mathematical framework combining Lagrangian relaxation with boundary analysis to address discrete-continuous resource allocation optimization problems in logistics, manufacturing, telecommunications, and finance.</p>
                     <div class="actions">
                         <a href="Discrete_Continuous_Resource_Distribution_Optimization.pdf" target="_blank" rel="noopener" class="preview">Preview</a>
-                        <a href="Discrete_Continuous_Resource_Distribution_Optimization.pdf" download class="download">Download PDF</a>
                     </div>
                 </li>
                 <li class="publication-item">
@@ -438,7 +444,6 @@
                     <p class="abstract">Abstrak: Analisis keunggulan mahasiswa ekonomi dalam menciptakan peluang keuangan melalui pendidikan, jaringan, dan digitalisasi.</p>
                     <div class="actions">
                         <a href="Keunggulan Mahasiswa FEB dalam Menciptakan Peluang Keuangan_Analisis Pendidikan, Jaringan, dan Digitalisasi.pdf" target="_blank" rel="noopener" class="preview">Preview</a>
-                        <a href="Keunggulan Mahasiswa FEB dalam Menciptakan Peluang Keuangan_Analisis Pendidikan, Jaringan, dan Digitalisasi.pdf" download class="download">Download PDF</a>
                     </div>
                 </li>
                 <li class="publication-item">
@@ -448,7 +453,6 @@
                     <p class="abstract">Abstract: A novel geometric-entropic mathematical framework to approach the P vs NP conjecture through complexity calculus.</p>
                     <div class="actions">
                         <a href="Complexity_Calculus_Geometric-Entropic_Framework_for_Tackling_the_P_vs_NP_Conjecture.pdf" target="_blank" rel="noopener" class="preview">Preview</a>
-                        <a href="Complexity_Calculus_Geometric-Entropic_Framework_for_Tackling_the_P_vs_NP_Conjecture.pdf" download class="download">Download PDF</a>
                     </div>
                 </li>
                 <li class="publication-item">
@@ -458,7 +462,6 @@
                     <p class="abstract">Abstract: A comprehensive exploration of problem reduction theory in computational complexity, examining fundamental principles, reduction techniques, and their applications in algorithm design and complexity analysis.</p>
                     <div class="actions">
                         <a href="problem-reduction-in-computational-complexity.pdf" target="_blank" rel="noopener" class="preview">Preview</a>
-                        <a href="problem-reduction-in-computational-complexity.pdf" download class="download">Download PDF</a>
                     </div>
                 </li>
                 <li class="publication-item">
@@ -468,7 +471,6 @@
                     <p class="abstract">Abstract: This paper analyzes the gap between current narrow AI (ANI) and the concept of AGI, highlighting key differences in generality, autonomy, and understanding. It discusses architectural needs, limitations of current systems, benchmarks for AGI, and alignment challenges.</p>
                     <div class="actions">
                         <a href="Comparison_of_Current_Narrow_AI_Systems_and_Hypothetical_Artificial_General_Intelligence.pdf" target="_blank" rel="noopener" class="preview">Preview</a>
-                        <a href="Comparison_of_Current_Narrow_AI_Systems_and_Hypothetical_Artificial_General_Intelligence.pdf" download class="download">Download PDF</a>
                     </div>
                 </li>
                 <li class="publication-item">
@@ -478,7 +480,6 @@
                     <p class="abstract">Abstract: Explains how Shor’s quantum algorithm threatens RSA and ECC by efficiently solving integer factorization and discrete logarithm problems, discusses quantum hardware progress, and the urgency of post-quantum cryptography.</p>
                     <div class="actions">
                         <a href="how-shor-s-algorithm-breaks-modern-cryptography.pdf" target="_blank" rel="noopener" class="preview">Preview</a>
-                        <a href="how-shor-s-algorithm-breaks-modern-cryptography.pdf" download class="download">Download PDF</a>
                     </div>
                 </li>
                 <li class="publication-item">
@@ -488,7 +489,6 @@
                     <p class="abstract">Abstrak: Paper ini membahas perbedaan lintasan afeksi pria dan wanita dalam hubungan romantis dengan pendekatan evolusi, neurobiologi, kelekatan, dan sosiologi. Disajikan model multifaktorial dan kurva afeksi untuk pemahaman yang lebih holistik.</p>
                     <div class="actions">
                         <a href="Paradoks_Afeksi__Mengurai_Lintasan_Cinta_Pria_dan_Wanita_dari_Perspektif_Evolusi__Neurobiologi__Kelekatan__dan_Sosiologi.pdf" target="_blank" rel="noopener" class="preview">Preview</a>
-                        <a href="Paradoks_Afeksi__Mengurai_Lintasan_Cinta_Pria_dan_Wanita_dari_Perspektif_Evolusi__Neurobiologi__Kelekatan__dan_Sosiologi.pdf" download class="download">Download PDF</a>
                     </div>
                 </li>
                 <li class="publication-item">
@@ -498,7 +498,6 @@
                     <p class="abstract">Abstract: This paper explains why proving P ≠ NP is so difficult, focusing on formal barriers such as Relativization, Natural Proofs, and Algebraization. It provides intuitive explanations and mathematical sketches to help readers understand why this fundamental question remains unresolved.</p>
                     <div class="actions">
                         <a href="understanding-the-obstacles-to-proving-p-is-not-equal-to-np-from-relativization.pdf" target="_blank" rel="noopener" class="preview">Preview</a>
-                        <a href="understanding-the-obstacles-to-proving-p-is-not-equal-to-np-from-relativization.pdf" download class="download">Download PDF</a>
                     </div>
                 </li>
                 <li class="publication-item">
@@ -508,7 +507,6 @@
                     <p class="abstract">Abstract: Caregiving responses in early childhood shape brain development and long-term mental health. This paper maps how small, daily interactions influence psychological outcomes, based on a synthesis of neuroscience and developmental research. Supportive responses build resilience, while negative ones increase risks of anxiety and depression. A practical framework is proposed for caregivers.</p>
                     <div class="actions">
                         <a href="Life_Blueprint.pdf" target="_blank" rel="noopener" class="preview">Preview</a>
-                        <a href="Life_Blueprint.pdf" download class="download">Download PDF</a>
                     </div>
                 </li>
             </ul>
@@ -585,6 +583,19 @@
                     }
                 });
             });
+
+            const publications = document.querySelectorAll('.publication-item');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    } else {
+                        entry.target.classList.remove('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            publications.forEach(pub => observer.observe(pub));
         });
     </script>
 </body>
