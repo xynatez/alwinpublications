@@ -218,16 +218,53 @@
             font-size: 1em;
         }
 
-        .publication-item a {
-            color: var(--accent-color);
-            text-decoration: none;
-            font-weight: 600;
-            display: inline-block;
+        .publication-item .authors {
+            margin-bottom: 15px;
+            font-size: 0.9em;
+            color: var(--text-secondary-color);
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
         }
-        
-        .publication-item a:hover {
-            color: var(--accent-hover-color);
-            text-decoration: underline;
+
+        .publication-item .authors i {
+            margin-right: 6px;
+            color: var(--icon-color);
+        }
+
+        .publication-item .actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .publication-item .actions a {
+            background-color: rgba(255, 255, 255, 0.3);
+            color: var(--text-color);
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            backdrop-filter: blur(6px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            transition: background-color 0.3s;
+        }
+
+        .publication-item .actions a:hover {
+            background-color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+        }
+
+        .publication-item {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .publication-item.visible {
+            opacity: 1;
+            transform: translateY(0);
         }
         
         .news-item {
@@ -331,98 +368,146 @@
                 <li class="publication-item">
                     <strong>A Friendly Introduction to Linear Algebra (June 2025)</strong>
                     <div class="type">[Book]</div>
+                    <div class="authors"><span><i class="fa-solid fa-user"></i> Alwin</span><span><i class="fa-solid fa-user"></i> Sahira AK</span></div>
                     <p class="abstract">Abstract: An introductory-level textbook in Indonesian that offers an intuitive approach to linear algebra. Covers systems of linear equations, vectors, vector spaces, matrices, and elementary row operations (ERO), with simple explanations and real-life analogies. Collaboration with Sahira AK.</p>
-                    <a href="Linear_Algebra.pdf" download>Download PDF</a>
+                    <div class="actions">
+                        <a href="Linear_Algebra.pdf" target="_blank" rel="noopener" class="preview">Preview</a>
+                    </div>
                 </li>
                 <li class="publication-item">
                     <strong>FOH-1: Front-Only Hardening for Obscuring API Keys in Serverless Frontends (September 2025)</strong>
                     <div class="type">[Research Paper]</div>
+                    <div class="authors"><span><i class="fa-solid fa-user"></i> Alwin</span><span><i class="fa-solid fa-user"></i> Sahira AK</span></div>
                     <p class="abstract">Abstract: FOH-1 (Front-Only Hardening) raises the cost of abusing browser-shipped secrets without claiming server-level secrecy. It combines AES-256-GCM sealing, shard-based runtime key reconstruction, JIT decryption, buffer zeroization, light anti-debugging, and deployment-bound ciphertext, with a pure-frontend reference and test plan. Collaboration with Sahira AK.</p>
-                    <a href="Front-Only Hardening for Obscuring API Keys in Serverless Frontends.pdf" download>Download PDF</a>
+                    <div class="actions">
+                        <a href="Front-Only Hardening for Obscuring API Keys in Serverless Frontends.pdf" target="_blank" rel="noopener" class="preview">Preview</a>
+                    </div>
                 </li>
                 <li class="publication-item">
                     <strong>What Is Protein Folding and Why Is It NP-Hard (June 2025)</strong>
                     <div class="type">[Research Paper]</div>
+                    <div class="authors"><span><i class="fa-solid fa-user"></i> Alwin</span><span><i class="fa-solid fa-user"></i> Sahira AK</span></div>
                     <p class="abstract">Abstract: An analysis of the computational complexity of protein folding, focusing on the NP-hardness of structure prediction using the HP lattice model and its implications for computational biology. Collaboration with Sahira AK.</p>
-                    <a href="What_Is_Protein_Folding_and_Why_Is_It_NP_Hard (1) 2.pdf" download>Download PDF</a>
+                    <div class="actions">
+                        <a href="What_Is_Protein_Folding_and_Why_Is_It_NP_Hard (1) 2.pdf" target="_blank" rel="noopener" class="preview">Preview</a>
+                    </div>
                 </li>
-                 <li class="publication-item">
+                <li class="publication-item">
                     <strong>A Deterministic Polynomial-Time Approach to SAT (May 2025)</strong>
                     <div class="type">[Research Proposal]</div>
+                    <div class="authors"><span><i class="fa-solid fa-user"></i> Alwin</span></div>
                     <p class="abstract">Abstract: A novel approach to solving the Boolean Satisfiability Problem in polynomial time using a deterministic algorithm.</p>
-                    <a href="A_Deterministic_Polynomial-Time_Approach_to_SAT.pdf" download>Download PDF</a>
+                    <div class="actions">
+                        <a href="A_Deterministic_Polynomial-Time_Approach_to_SAT.pdf" target="_blank" rel="noopener" class="preview">Preview</a>
+                    </div>
                 </li>
-                 <li class="publication-item">
+                <li class="publication-item">
                     <strong>The P vs NP Problem (May 2025)</strong>
                     <div class="type">[Research Proposal]</div>
+                    <div class="authors"><span><i class="fa-solid fa-user"></i> Alwin</span></div>
                     <p class="abstract">Abstract: A comprehensive analysis and potential solution approaches for one of the most fundamental problems in computer science. Keywords: P vs NP, Computational Complexity, Theoretical Computer Science.</p>
-                    <a href="The_P_vs_NP_Problem.pdf" download>Download PDF</a>
+                    <div class="actions">
+                        <a href="The_P_vs_NP_Problem.pdf" target="_blank" rel="noopener" class="preview">Preview</a>
+                    </div>
                 </li>
-                 <li class="publication-item">
+                <li class="publication-item">
                     <strong>XSPC-256: A Privacy-Centric Frontend Encryption Protocol (May 2025)</strong>
                     <div class="type">[Research Proposal]</div>
+                    <div class="authors"><span><i class="fa-solid fa-user"></i> Alwin</span></div>
                     <p class="abstract">Abstract: An innovative encryption protocol for frontend applications with deterministic key derivation and probabilistic obfuscation.</p>
-                    <a href="XSPC-256.pdf" download>Download PDF</a>
+                    <div class="actions">
+                        <a href="XSPC-256.pdf" target="_blank" rel="noopener" class="preview">Preview</a>
+                    </div>
                 </li>
-                 <li class="publication-item">
+                <li class="publication-item">
                     <strong>Teknologi Blockchain dan Cryptocurrency (May 2025)</strong>
                     <div class="type">[Research Proposal]</div>
+                    <div class="authors"><span><i class="fa-solid fa-user"></i> Alwin</span></div>
                     <p class="abstract">Abstrak: Studi komprehensif tentang teknologi blockchain, sistem cryptocurrency, aspek keamanan, aplikasi, dan potensi ekonomi.</p>
-                    <a href="TeknologiBlockchaindanCryptocurrency.pdf" download>Download PDF</a>
+                    <div class="actions">
+                        <a href="TeknologiBlockchaindanCryptocurrency.pdf" target="_blank" rel="noopener" class="preview">Preview</a>
+                    </div>
                 </li>
-                 <li class="publication-item">
+                <li class="publication-item">
                     <strong>Discrete-Continuous Resource Distribution Optimization via Lagrange Relaxation and Boundary Analysis (May 2025)</strong>
                     <div class="type">[Article]</div>
+                    <div class="authors"><span><i class="fa-solid fa-user"></i> Alwin</span></div>
                     <p class="abstract">Abstract: A mathematical framework combining Lagrangian relaxation with boundary analysis to address discrete-continuous resource allocation optimization problems in logistics, manufacturing, telecommunications, and finance.</p>
-                    <a href="Discrete_Continuous_Resource_Distribution_Optimization.pdf" download>Download PDF</a>
+                    <div class="actions">
+                        <a href="Discrete_Continuous_Resource_Distribution_Optimization.pdf" target="_blank" rel="noopener" class="preview">Preview</a>
+                    </div>
                 </li>
-                 <li class="publication-item">
+                <li class="publication-item">
                     <strong>Keunggulan Mahasiswa FEB dalam Menciptakan Peluang Keuangan (February 2025)</strong>
                     <div class="type">[Research Proposal]</div>
+                    <div class="authors"><span><i class="fa-solid fa-user"></i> Alwin</span></div>
                     <p class="abstract">Abstrak: Analisis keunggulan mahasiswa ekonomi dalam menciptakan peluang keuangan melalui pendidikan, jaringan, dan digitalisasi.</p>
-                    <a href="Keunggulan Mahasiswa FEB dalam Menciptakan Peluang Keuangan_Analisis Pendidikan, Jaringan, dan Digitalisasi.pdf" download>Download PDF</a>
+                    <div class="actions">
+                        <a href="Keunggulan Mahasiswa FEB dalam Menciptakan Peluang Keuangan_Analisis Pendidikan, Jaringan, dan Digitalisasi.pdf" target="_blank" rel="noopener" class="preview">Preview</a>
+                    </div>
                 </li>
-                 <li class="publication-item">
+                <li class="publication-item">
                     <strong>Complexity Calculus: Geometric-Entropic Framework for P vs NP (February 2025)</strong>
                     <div class="type">[Research Proposal]</div>
+                    <div class="authors"><span><i class="fa-solid fa-user"></i> Alwin</span></div>
                     <p class="abstract">Abstract: A novel geometric-entropic mathematical framework to approach the P vs NP conjecture through complexity calculus.</p>
-                    <a href="Complexity_Calculus_Geometric-Entropic_Framework_for_Tackling_the_P_vs_NP_Conjecture.pdf" download>Download PDF</a>
+                    <div class="actions">
+                        <a href="Complexity_Calculus_Geometric-Entropic_Framework_for_Tackling_the_P_vs_NP_Conjecture.pdf" target="_blank" rel="noopener" class="preview">Preview</a>
+                    </div>
                 </li>
-                 <li class="publication-item">
+                <li class="publication-item">
                     <strong>Problem Reduction in Computational Complexity: Foundations, Techniques, and Applications (February 2025)</strong>
                     <div class="type">[Research Proposal]</div>
+                    <div class="authors"><span><i class="fa-solid fa-user"></i> Alwin</span></div>
                     <p class="abstract">Abstract: A comprehensive exploration of problem reduction theory in computational complexity, examining fundamental principles, reduction techniques, and their applications in algorithm design and complexity analysis.</p>
-                    <a href="problem-reduction-in-computational-complexity.pdf" download>Download PDF</a>
+                    <div class="actions">
+                        <a href="problem-reduction-in-computational-complexity.pdf" target="_blank" rel="noopener" class="preview">Preview</a>
+                    </div>
                 </li>
-                 <li class="publication-item">
+                <li class="publication-item">
                     <strong>Comparison of Current Narrow AI Systems and Hypothetical Artificial General Intelligence (July 2025)</strong>
                     <div class="type">[Research Paper]</div>
+                    <div class="authors"><span><i class="fa-solid fa-user"></i> Alwin</span></div>
                     <p class="abstract">Abstract: This paper analyzes the gap between current narrow AI (ANI) and the concept of AGI, highlighting key differences in generality, autonomy, and understanding. It discusses architectural needs, limitations of current systems, benchmarks for AGI, and alignment challenges.</p>
-                    <a href="Comparison_of_Current_Narrow_AI_Systems_and_Hypothetical_Artificial_General_Intelligence.pdf" download>Download PDF</a>
+                    <div class="actions">
+                        <a href="Comparison_of_Current_Narrow_AI_Systems_and_Hypothetical_Artificial_General_Intelligence.pdf" target="_blank" rel="noopener" class="preview">Preview</a>
+                    </div>
                 </li>
-                 <li class="publication-item">
+                <li class="publication-item">
                     <strong>How Shor’s Algorithm Breaks Modern Cryptography (June 2025)</strong>
                     <div class="type">[Research Paper]</div>
+                    <div class="authors"><span><i class="fa-solid fa-user"></i> Alwin</span></div>
                     <p class="abstract">Abstract: Explains how Shor’s quantum algorithm threatens RSA and ECC by efficiently solving integer factorization and discrete logarithm problems, discusses quantum hardware progress, and the urgency of post-quantum cryptography.</p>
-                    <a href="how-shor-s-algorithm-breaks-modern-cryptography.pdf" download>Download PDF</a>
+                    <div class="actions">
+                        <a href="how-shor-s-algorithm-breaks-modern-cryptography.pdf" target="_blank" rel="noopener" class="preview">Preview</a>
+                    </div>
                 </li>
-                 <li class="publication-item">
+                <li class="publication-item">
                     <strong>Paradoks Afeksi: Mengurai Lintasan Cinta Pria dan Wanita dari Perspektif Evolusi, Neurobiologi, Kelekatan, dan Sosiologi (Juni 2025)</strong>
                     <div class="type">[Research Paper]</div>
+                    <div class="authors"><span><i class="fa-solid fa-user"></i> Alwin</span></div>
                     <p class="abstract">Abstrak: Paper ini membahas perbedaan lintasan afeksi pria dan wanita dalam hubungan romantis dengan pendekatan evolusi, neurobiologi, kelekatan, dan sosiologi. Disajikan model multifaktorial dan kurva afeksi untuk pemahaman yang lebih holistik.</p>
-                    <a href="Paradoks_Afeksi__Mengurai_Lintasan_Cinta_Pria_dan_Wanita_dari_Perspektif_Evolusi__Neurobiologi__Kelekatan__dan_Sosiologi.pdf" download>Download PDF</a>
+                    <div class="actions">
+                        <a href="Paradoks_Afeksi__Mengurai_Lintasan_Cinta_Pria_dan_Wanita_dari_Perspektif_Evolusi__Neurobiologi__Kelekatan__dan_Sosiologi.pdf" target="_blank" rel="noopener" class="preview">Preview</a>
+                    </div>
                 </li>
-                 <li class="publication-item">
+                <li class="publication-item">
                     <strong>Understanding the Obstacles to Proving P is not Equal to NP From Relativization to Algebraization and Beyond (June 2025)</strong>
                     <div class="type">[Research Paper]</div>
+                    <div class="authors"><span><i class="fa-solid fa-user"></i> Alwin</span></div>
                     <p class="abstract">Abstract: This paper explains why proving P ≠ NP is so difficult, focusing on formal barriers such as Relativization, Natural Proofs, and Algebraization. It provides intuitive explanations and mathematical sketches to help readers understand why this fundamental question remains unresolved.</p>
-                    <a href="understanding-the-obstacles-to-proving-p-is-not-equal-to-np-from-relativization.pdf" download>Download PDF</a>
+                    <div class="actions">
+                        <a href="understanding-the-obstacles-to-proving-p-is-not-equal-to-np-from-relativization.pdf" target="_blank" rel="noopener" class="preview">Preview</a>
+                    </div>
                 </li>
-                 <li class="publication-item">
+                <li class="publication-item">
                     <strong>The Influence of Early Childhood Experiences on Long-term Psychological and Emotional Development (August 2025)</strong>
                     <div class="type">[Research Paper]</div>
+                    <div class="authors"><span><i class="fa-solid fa-user"></i> Alwin</span></div>
                     <p class="abstract">Abstract: Caregiving responses in early childhood shape brain development and long-term mental health. This paper maps how small, daily interactions influence psychological outcomes, based on a synthesis of neuroscience and developmental research. Supportive responses build resilience, while negative ones increase risks of anxiety and depression. A practical framework is proposed for caregivers.</p>
-                    <a href="Life_Blueprint.pdf" download>Download PDF</a>
+                    <div class="actions">
+                        <a href="Life_Blueprint.pdf" target="_blank" rel="noopener" class="preview">Preview</a>
+                    </div>
                 </li>
             </ul>
         </section>
@@ -498,6 +583,19 @@
                     }
                 });
             });
+
+            const publications = document.querySelectorAll('.publication-item');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    } else {
+                        entry.target.classList.remove('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            publications.forEach(pub => observer.observe(pub));
         });
     </script>
 </body>
